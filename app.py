@@ -46,7 +46,6 @@ def submit_lead_summary(request):
     }
 
     response = requests.request("POST", url, headers=headers, data = json.dumps(payload))
-    if response.status_c = 200
     return response.text
 
 def hello():
