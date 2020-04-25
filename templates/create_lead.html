@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Lead Summary{% endblock %}</h1>
+    {% if response %}
+        <p>{{ response }}</p>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="firstname">First Name</label>
+    <input name="firstname" id="firstname">
+    <br>
+    <label for="lastname">Last Name</label>
+    <input name="lastname" id="lastname" required>
+    <br>
+    <label for="email">Email</label>
+    <input name="email" id="email" type="email">
+    <br>
+    <label for="phone">Phone</label>
+    <input name="phone" id="phone" type="number">
+    <br>
+    <label for="intake_status">Intake Status</label>
+    <input name="intake_status" id="intake_status">
+    <br>
+    <label for="description">Description</label>
+    <input name="description" id="description">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
